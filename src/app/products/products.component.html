@@ -1,0 +1,10 @@
+<h2>Hi, this is the Products Component and it works!</h2>
+
+<input  *ngIf="!isDisabled" type="text" [(ngModel)]="productName">
+<button (click)="onAddProduct()"
+[disabled] = "isDisabled">Change Name</button>
+
+<div *ngFor="let product of products">
+ <h3>  {{ product}} </h3> <!-- productName-->
+</div>
+<!-- (click)="productName='A big Tree'"-->
